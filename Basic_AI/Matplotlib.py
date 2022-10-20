@@ -111,3 +111,37 @@ plt.plot(x,y,'-ok')
 plt.plot(x, y, '-p', color='grey', markersize=15, linewidth=4, markerfacecolor='white', markeredgecolor = 'red', markeredgewidth = '2') #p = 5각형
 
 plt.scatter(x, y, marker='o',s=150)
+
+rng = np.random.RandomState(0)
+
+x = rng.randn(100)
+y = rng.randn(100)
+color = rng.randn(100)
+size = 1000*rng.randn(100)
+
+plt.scatter(x,y,s=size,c=color, alpha=0.3, cmap='viridis') # alpha 투명도
+plt.colorbar()
+
+
+from sklearn.datasets import load_iris #sckit-learn
+iris = load_iris() #iris 꽃 데이터 가져옴
+
+#iris.shape # numpy가 아님
+type(iris)
+iris.data
+iris.data.T
+iris.target
+
+features = iris.data.T
+
+plt.scatter(features[0], features[1], s=100 * features[3], alpha=0.3)
+plt.xlabel(iris.feature_names[0])
+plt.ylabel(iris.feature_names[1])
+
+#오차 시각화
+x = np.linspace(0,10,50)
+dy = 0.8
+y = np.sin(x) + dy*np.random.randn(50)
+
+plt.errorbar(x, y,yerr=dy, fmt='.k')
+plt.errorbar(x,y,yerr=dy, fmt='o', color = 'k', ecolor='lightgray', elinewidth=3, capsize = 0)
