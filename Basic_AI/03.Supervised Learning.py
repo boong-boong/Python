@@ -1,3 +1,4 @@
+from os import P_ALL
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -118,7 +119,7 @@ print('다중 서포트 머신 회귀 R2: {:.4f}'.format(r2_score(y_test, y_pred
 best_svm_num = 0
 best_svm_r2 = 0
 
-for i in range(1, 101):
+for i in range(1, 11):
     svm_regr = SVR(C = i)
     svm_regr.fit(X_train,y_train)
     y_pred = svm_regr.predict(X_test)
@@ -130,3 +131,12 @@ for i in range(1, 101):
         best_svm_r2 = temp
         best_svm_num = i
 print('다중 서포트 머신 회귀 최적값 C = {} R2 = {:.4f}'.format(best_svm_num, best_svm_r2))
+
+# Multi Layer Perceptron Regressor
+from sklearn.neural_network import MLPRegressor
+mlp_regr = MLPRegressor(solver= 'adam', hidden_layer_sizes=300, max_iter=400) #lbfgs, sgd, adam
+
+mlp_regr.fit(X_train, y_train)
+y_pred = mlp_regr.predict(X_test)
+
+print('다중 MLP 회귀, R2: {:.4f}'.format(r2_score(y_test,y_pred)))
