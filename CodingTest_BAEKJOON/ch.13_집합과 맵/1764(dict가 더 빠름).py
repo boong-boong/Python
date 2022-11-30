@@ -14,7 +14,7 @@ print(len(result))
 
 for i in result:
     print(i)
-
+# set이 시간은 더 걸림
 # n, m = map(int, input().split())
 #
 # no_hear = []
