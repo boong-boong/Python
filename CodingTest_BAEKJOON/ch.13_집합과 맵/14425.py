@@ -1,6 +1,6 @@
 n, m = map(int, input().split())
 
-n_word =[]
+n_word = []
 m_word = []
 
 for i in range(n):
