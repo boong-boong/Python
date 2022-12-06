@@ -4,7 +4,7 @@ import numpy as np
 from math import sqrt
 
 # 데이터 읽어오기
-# 1205 현재 위치 -> 2개 csv 존재, ex07.py
+# 1205 현재 위치 -> 2개 csv 존재, back_rm.py
 movies = pd.read_csv("./movies.csv")
 ratings = pd.read_csv("./ratings.csv")
 
