@@ -8,7 +8,7 @@ face_img = cv2.imread('face.png')  # 파일명 숫자로 시작할 경우 오류
 
 face_gray = cv2.cvtColor(face_img, cv2.COLOR_BGR2GRAY)
 
-faces = face_cascade.detectMultiScale(face_gray, 1.1, 4)
+faces = face_cascade.detectMultiScale(face_gray, 1.1, 3)
 
 for (x, y, w, h) in faces:  # 파일명 숫자로 시작할 경우 오류 날 수 있음
     cv2.rectangle(face_img, (x, y), (x+w, y+h), (0, 255, 0), 3)
