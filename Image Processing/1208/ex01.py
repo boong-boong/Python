@@ -23,14 +23,13 @@ img2 reize >> (600, 800, 3)
 """
 # 혼합 진행
 
-# # 베이스 5:5
-# blended = cv2.addWeighted(img1, 0.5, img2, 0.5, 0)
-
-# # 9:1
+# 베이스 5:5
+blended = cv2.addWeighted(img1, 0.5, img2, 0.5, 0)
+# 9:1
 # blended = cv2.addWeighted(img1, 9, img2, 1, 0)
-
 # 1로 설정
-blended = cv2.addWeighted(img1, 1, img2, 1, 0)
+# blended = cv2.addWeighted(img1, 1, img2, 1, 0)
+
 cv2.imshow("image show", blended)
 cv2.waitKey(0)
 # cv2.imshow("image large", img1)
