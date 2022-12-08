@@ -1,3 +1,0 @@
-ID = input()
-
-print(ID + '??!')
