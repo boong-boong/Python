@@ -6,3 +6,11 @@
 /.idea/modules.xml
 /.idea/inspectionProfiles/profiles_settings.xml
 /.idea/other.xml
+/Image Processing/1209/crawling/data/
+/Image Processing/1209/crawling/test/
+/.gitignore
+/Image Processing/1209/crawling/train/
+/Image Processing/1212/사과_img_download/
+/Image Processing/1212/딸기_high_resolution/
+/Image Processing/1212/사과_high_resolution/
+/Image Processing/1212/키위_high_resolution/

@@ -23,7 +23,7 @@ keyword = []
 
 
 def image_download(keywords):
-    create_folder("./" + keywords + "_low_resolution")
+    create_folder("./" + keywords + "_high_resolution")
 
     # 크롬 드라이브 호출
     options = webdriver.ChromeOptions()
@@ -43,37 +43,48 @@ def image_download(keywords):
     # 스크롤 내리기 -> 결과 더보기 버튼 클릭
     print("스크롤 ..... ", keywords)
     elem = driver.find_element_by_tag_name('body')
-    for i in range(60):
+    for i in range(100):
         elem.send_keys(Keys.PAGE_DOWN)
-        time.sleep(0.2)
+        time.sleep(0.4)
 
     try:
         # //*[@id="islmp"]/div/div/div/div[2]/div[1]/div[2]/div[2]/input
         driver.find_element_by_xpath(
             '//*[@id="islmp"]/div/div/div/div[2]/div[1]/div[2]/div[2]/input').click()
-        for i in range(60):
+        for i in range(100):
             elem.send_keys(Keys.PAGE_DOWN)
-            time.sleep(0.2)
+            time.sleep(0.4)
     except:
         pass
 
-    links = []
     images = driver.find_elements_by_css_selector("img.rg_i.Q4LuWd")
-    for image in images:
-        if image.get_attribute('src') != None:
-            links.append(image.get_attribute('src'))
+    print(keywords + ' 찾은 이미지 개수:', len(images))
 
-    print(keywords + '찾은 이미지 개수 : ', + len(links))
-    time.sleep(2)
-
+    links = []
+    for i in range(1, len(images)):
+        try:
+            # //*[@id="islrg"]/div[1]/div[1]/a[1]/div[1]/img
+            # //*[@id = "islrg"]/div[1]/div[40]/a[1]/div[1]/img
+            driver.find_element_by_xpath(
+                '//*[@id="islrg"]/div[1]/div['+str(i)+']/a[1]/div[1]/img').click()
+            links.append(driver.find_element_by_xpath(
+                '//*[@id="Sva75c"]/div[2]/div/div[2]/div[2]/div[2]/c-wiz/div[2]/div[1]/div[1]/div[2]/div/a/img').get_attribute('src'))
+            print(keywords + '링크 수집 중 ... number :  ' +
+                  str(i) + '/' + str(len(images)))
+        except:
+            continue
+    fordidden = 0
     for index, i in enumerate(links):
-        url = i
-        start = time.time()
-        urllib.request.urlretrieve(
-            url, "./" + keywords + "_low_resolution/" + keywords + "_" + str(index) + ".jpg")
-        print(str(index+1) + "/" + str(len(links)) + " " + keywords +
-              " 다운로드 시간 ------ : ", str(time.time() - start)[:5] + '초')
-    print("다운로드 완료 !!!!")
+        try:
+            url = i
+            start = time.time()
+            urllib.request.urlretrieve(
+                url, "./" + keywords + "_high_resolution/" + keywords + "_" + str(index-fordidden) + ".jpg")
+            print(str(index+1) + "/" + str(len(links)) + ' ' + keywords +
+                  '다운로드 중 ..... Download time : ' + str(time.time()-start)[:5] + '초')
+        except:
+            fordidden += 1
+            continue
 
 
 if __name__ == '__main__':
