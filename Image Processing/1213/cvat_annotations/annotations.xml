@@ -3,28 +3,28 @@
   <version>1.1</version>
   <meta>
     <job>
-      <id>48738</id>
+      <id>49412</id>
       <size>7</size>
       <mode>annotation</mode>
       <overlap>0</overlap>
       <bugtracker></bugtracker>
-      <created>2022-12-12 14:08:08.108803+00:00</created>
-      <updated>2022-12-12 14:10:44.042871+00:00</updated>
+      <created>2022-12-13 13:38:55.092449+00:00</created>
+      <updated>2022-12-14 15:01:57.855866+00:00</updated>
       <subset>default</subset>
       <start_frame>0</start_frame>
       <stop_frame>6</stop_frame>
       <frame_filter></frame_filter>
       <segments>
         <segment>
-          <id>48738</id>
+          <id>49412</id>
           <start>0</start>
           <stop>6</stop>
-          <url>https://app.cvat.ai/api/jobs/48738</url>
+          <url>https://app.cvat.ai/api/jobs/49412</url>
         </segment>
       </segments>
       <owner>
-        <username>bo400</username>
-        <email>rkdghdyd1130@gmail.com</email>
+        <username>jh868</username>
+        <email>2weeks9947@naver.com</email>
       </owner>
       <assignee></assignee>
       <labels>
@@ -37,80 +37,102 @@
         </label>
       </labels>
     </job>
-    <dumped>2022-12-13 04:16:12.767948+00:00</dumped>
+    <dumped>2022-12-14 15:02:37.038498+00:00</dumped>
   </meta>
   <image id="0" name="kiwi_1.jpg" width="500" height="332">
-    <box label="kiwi" occluded="0" source="manual" xtl="0.00" ytl="29.22" xbr="251.91" ybr="220.28" z_order="0">
+    <box label="kiwi" occluded="0" source="manual" xtl="266.79" ytl="55.48" xbr="468.37" ybr="237.20" z_order="0">
     </box>
-    <box label="kiwi" occluded="0" source="manual" xtl="102.27" ytl="199.74" xbr="295.06" ybr="307.28" z_order="0">
+    <box label="kiwi" occluded="0" source="manual" xtl="96.99" ytl="204.43" xbr="298.57" ybr="310.68" z_order="0">
     </box>
-    <box label="kiwi" occluded="0" source="manual" xtl="245.99" ytl="0.68" xbr="459.32" ybr="101.61" z_order="0">
+    <box label="kiwi" occluded="0" source="manual" xtl="0.00" ytl="23.70" xbr="256.86" ybr="215.35" z_order="0">
     </box>
-    <box label="kiwi" occluded="0" source="manual" xtl="265.83" ytl="57.76" xbr="471.50" ybr="240.46" z_order="0">
-    </box>
+    <polygon label="kiwi" occluded="0" source="manual" points="300.16,79.96;282.78,100.65;269.54,120.51;268.71,138.71;281.95,174.29;292.71,194.98;296.85,209.88;314.22,222.29;333.26,231.39;372.15,234.70;414.35,233.05;449.93,212.36;454.07,197.46;468.14,166.85;475.59,141.19;464.83,114.71;454.90,93.20;431.73,73.34;410.21,65.89;373.80,58.44;357.25,58.44;332.43,64.24;309.26,73.34" z_order="0">
+    </polygon>
+    <polygon label="kiwi" occluded="0" source="manual" points="144.59,221.46;108.18,223.94;100.73,224.77;102.38,240.49;115.62,263.66;134.66,282.70;152.86,296.76;185.13,303.38;224.85,304.21;260.44,293.45;276.99,280.21;288.57,260.35;294.36,236.36;297.67,214.84;289.40,201.60" z_order="0">
+    </polygon>
+    <polygon label="kiwi" occluded="0" source="manual" points="104.04,34.45;46.11,56.79;19.63,73.34;0.60,97.34;0.60,173.47;22.12,206.57;64.32,218.98;94.11,228.91;147.07,219.81;191.75,212.36;231.47,191.67;245.54,162.71;253.82,127.95;249.68,95.68;233.96,66.72;213.27,44.38;183.48,33.62;144.59,28.65;112.31,31.96" z_order="0">
+    </polygon>
   </image>
   <image id="1" name="kiwi_2.jpg" width="388" height="333">
-    <box label="kiwi" occluded="0" source="manual" xtl="186.13" ytl="23.40" xbr="343.91" ybr="177.68" z_order="0">
+    <box label="kiwi" occluded="0" source="manual" xtl="184.15" ytl="21.01" xbr="352.48" ybr="186.44" z_order="0">
     </box>
-    <box label="kiwi" occluded="0" source="manual" xtl="8.81" ytl="8.74" xbr="171.82" ybr="201.07" z_order="0">
+    <polygon label="kiwi" occluded="0" source="manual" points="58.90,12.51;44.44,19.73;31.66,29.46;21.65,42.80;15.81,60.32;12.48,76.44;12.20,105.62;13.87,118.41;16.09,135.92;23.60,157.32;30.27,167.33;42.78,187.07;48.89,186.23;71.13,195.68;90.03,197.07;103.37,198.19;118.10,196.52;133.11,190.12;147.01,178.45;164.25,160.38;171.20,123.69;171.20,106.46;166.47,91.73;160.08,74.49;149.24,51.98;144.79,41.97;133.11,30.02;115.32,23.62;98.65,17.23;85.86,10.28;55.56,13.34" z_order="0">
+    </polygon>
+    <polygon label="kiwi" occluded="0" source="manual" points="226.79,37.24;215.67,44.47;203.72,56.70;197.88,67.82;192.60,81.72;189.54,94.78;190.37,112.85;197.05,131.75;203.99,145.93;212.33,157.88;227.62,169.28;242.63,177.89;261.26,181.23;279.32,179.01;296.28,172.89;317.13,162.88;325.19,145.65;335.75,123.69;340.75,104.51;343.25,85.89;342.42,67.54;337.42,54.76;329.91,43.36;316.57,34.19;297.67,25.29;279.60,23.62;254.58,26.40;237.35,31.96" z_order="0">
+    </polygon>
+    <polygon label="kiwi" occluded="0" source="manual" points="181.20,169.28;172.59,172.89;157.30,185.96;150.07,191.24;145.90,204.58;141.18,213.20;137.56,230.99;135.06,242.94;137.28,259.62;143.12,277.41;153.96,287.41;171.20,299.36;196.21,307.43;217.62,310.76;239.02,311.04;264.59,306.59;276.82,296.86;292.39,281.02;298.78,260.45;297.39,236.27;289.33,217.09;282.10,200.69;270.98,188.46;261.53,182.06;229.01,166.50;209.83,164.00;188.71,167.33" z_order="0">
+    </polygon>
+    <box label="kiwi" occluded="0" source="manual" xtl="3.88" ytl="7.06" xbr="175.19" ybr="204.37" z_order="0">
     </box>
-    <box label="kiwi" occluded="0" source="manual" xtl="132.70" ytl="162.70" xbr="298.88" ybr="311.72" z_order="0">
+    <box label="kiwi" occluded="0" source="manual" xtl="136.34" ytl="160.45" xbr="304.67" ybr="314.93" z_order="0">
     </box>
   </image>
   <image id="2" name="kiwi_3.jpg" width="764" height="572">
-    <box label="kiwi" occluded="0" source="manual" xtl="391.27" ytl="106.11" xbr="748.02" ybr="504.23" z_order="0">
+    <box label="kiwi" occluded="0" source="manual" xtl="397.74" ytl="98.68" xbr="753.76" ybr="512.87" z_order="0">
     </box>
-    <box label="kiwi" occluded="0" source="manual" xtl="32.72" ytl="91.12" xbr="400.86" ybr="428.69" z_order="0">
+    <polygon label="kiwi" occluded="0" source="manual" points="443.58,139.92;426.39,160.92;420.66,172.86;411.59,192.44;404.43,212.49;400.61,244.96;398.70,305.12;403.95,318.01;414.93,370.05;433.55,416.37;451.70,434.51;468.41,457.91;499.44,487.51;527.14,494.19;550.53,502.79;576.79,502.79;643.64,476.53;672.29,461.25;708.10,430.69;733.88,388.20;745.82,360.98;749.16,320.87;738.18,282.68;730.06,240.66;713.35,209.62;695.20,185.75;654.62,151.37;623.11,132.75;570.59,115.09;533.34,107.93;494.19,109.36;468.89,119.38" z_order="0">
+    </polygon>
+    <polygon label="kiwi" occluded="0" source="manual" points="177.16,102.67;127.50,124.64;93.60,148.51;70.68,170.47;54.93,195.30;42.04,228.72;39.17,253.55;33.92,287.93;39.17,313.23;48.72,341.40;78.80,383.90;104.11,399.65;146.12,413.50;175.72,423.53;246.87,423.05;282.20,411.11;313.23,393.93;347.13,361.94;380.56,311.32;395.36,257.37;403.00,233.02;390.11,193.39;374.83,159.97;350.00,129.41;311.32,101.24;295.57,97.42;272.17,84.05;243.52,87.39;206.28,91.69" z_order="0">
+    </polygon>
+    <box label="kiwi" occluded="0" source="manual" xtl="28.20" ytl="83.28" xbr="399.62" ybr="444.44" z_order="0">
     </box>
   </image>
   <image id="3" name="kiwi_4.jpg" width="750" height="750">
-    <box label="kiwi" occluded="0" source="manual" xtl="419.42" ytl="189.47" xbr="708.73" ybr="498.43" z_order="0">
+    <box label="kiwi" occluded="0" source="manual" xtl="422.69" ytl="181.73" xbr="710.57" ybr="494.10" z_order="0">
     </box>
-    <box label="kiwi" occluded="0" source="manual" xtl="166.27" ytl="309.75" xbr="534.20" ybr="620.28" z_order="0">
+    <polygon label="kiwi" occluded="0" source="manual" points="233.51,334.31;196.58,369.37;171.54,421.33;170.91,465.15;177.80,505.84;202.21,560.31;224.12,577.21;270.45,609.14;314.90,616.65;394.41,613.52;435.10,593.49;491.44,554.05;521.49,503.34;534.64,450.75;520.87,406.93;457.01,319.91;403.80,318.66;344.32,312.40;251.67,323.66" z_order="0">
+    </polygon>
+    <polygon label="kiwi" occluded="0" source="manual" points="463.27,206.59;435.10,241.03;421.95,273.58;420.70,311.14;444.49,338.06;509.60,396.29;529.63,440.11;571.58,487.69;611.64,483.93;665.48,438.23;711.81,358.72;699.29,308.01;683.64,252.30;651.09,236.02;592.24,200.33;557.80,191.57;513.36,193.45" z_order="0">
+    </polygon>
+    <box label="kiwi" occluded="0" source="manual" xtl="157.24" ytl="305.11" xbr="536.72" ybr="628.69" z_order="0">
     </box>
-    <box label="kiwi" occluded="0" source="manual" xtl="43.63" ytl="158.02" xbr="425.71" ybr="461.48" z_order="0">
+    <box label="kiwi" occluded="0" source="manual" xtl="50.69" ytl="146.40" xbr="433.91" ybr="458.58" z_order="0">
     </box>
   </image>
   <image id="4" name="kiwi_5.jpg" width="500" height="500">
-    <box label="kiwi" occluded="0" source="manual" xtl="238.73" ytl="84.38" xbr="456.76" ybr="333.86" z_order="0">
+    <box label="kiwi" occluded="0" source="manual" xtl="37.54" ytl="144.22" xbr="241.92" ybr="346.11" z_order="0">
     </box>
-    <box label="kiwi" occluded="0" source="manual" xtl="165.36" ytl="189.73" xbr="399.11" ybr="411.95" z_order="0">
+    <box label="kiwi" occluded="0" source="manual" xtl="159.67" ytl="181.48" xbr="407.67" ybr="415.90" z_order="0">
     </box>
-    <box label="kiwi" occluded="0" source="manual" xtl="38.52" ytl="142.03" xbr="240.83" ybr="346.44" z_order="0">
+    <polygon label="kiwi" occluded="0" source="manual" points="244.57,196.16;217.45,212.02;183.64,241.65;168.20,282.97;159.85,323.46;170.70,350.58;194.49,383.14;211.60,398.16;240.40,408.18;282.14,411.52;312.19,410.68;354.34,396.08;366.86,376.46;387.73,344.74;406.51,287.56;397.33,269.62;382.30,241.65;360.60,218.28;339.32,202.42;293.82,189.48;262.10,190.73" z_order="0">
+    </polygon>
+    <box label="kiwi" occluded="0" source="manual" xtl="241.92" ytl="73.06" xbr="457.52" ybr="339.88" z_order="0">
     </box>
+    <polygon label="kiwi" occluded="0" source="manual" points="95.16,168.20;54.26,209.93;42.15,237.06;41.32,280.47;48.41,300.92;67.61,319.70;91.82,337.23;126.46,343.49;148.16,351.00;171.54,340.57;163.61,301.34;176.13,256.26;203.67,221.62;237.06,199.08;236.23,184.06;217.45,166.53;185.73,152.34;143.16,151.50;114.77,159.02" z_order="0">
+    </polygon>
   </image>
   <image id="5" name="kiwi_6.jpg" width="275" height="183">
-    <box label="kiwi" occluded="0" source="manual" xtl="73.13" ytl="63.29" xbr="130.13" ybr="120.07" z_order="0">
+    <polygon label="kiwi" occluded="0" source="manual" points="82.16,69.81;76.30,75.12;71.72,85.76;71.53,90.89;71.90,99.50;76.11,107.57;80.33,114.72;83.81,118.02;90.96,119.85;99.94,120.40;107.46,119.48;113.51,117.29;118.09,116.00;125.24,108.12;129.27,99.32;130.37,91.07;129.46,83.37;124.51,76.41;115.89,69.81;112.04,66.33;101.41,64.49;88.21,65.78" z_order="0">
+    </polygon>
+    <polygon label="kiwi" occluded="0" source="manual" points="70.62,12.43;62.92,19.77;61.27,34.43;61.27,45.43;68.60,59.18;73.73,61.74;97.74,62.11;106.73,57.53;110.94,48.55;114.24,36.63;112.78,29.12;108.74,21.97;106.54,19.03;100.31,12.80;91.15,10.78;85.83,9.87" z_order="0">
+    </polygon>
+    <box label="kiwi" occluded="0" source="manual" xtl="49.89" ytl="114.91" xbr="123.83" ybr="176.76" z_order="0">
     </box>
-    <box label="kiwi" occluded="0" source="manual" xtl="114.76" ytl="69.82" xbr="170.20" ybr="130.05" z_order="0">
+    <box label="kiwi" occluded="0" source="manual" xtl="115.02" ytl="67.84" xbr="171.45" ybr="137.90" z_order="0">
     </box>
-    <box label="kiwi" occluded="0" source="manual" xtl="110.54" ytl="10.00" xbr="155.80" ybr="71.73" z_order="0">
+    <box label="kiwi" occluded="0" source="manual" xtl="104.07" ytl="5.99" xbr="158.86" ybr="71.67" z_order="0">
     </box>
-    <box label="kiwi" occluded="0" source="manual" xtl="57.79" ytl="9.01" xbr="110.54" ybr="66.36" z_order="0">
+    <box label="kiwi" occluded="0" source="manual" xtl="0.00" ytl="104.51" xbr="58.70" ybr="171.83" z_order="0">
     </box>
-    <box label="kiwi" occluded="0" source="manual" xtl="49.16" ytl="113.55" xbr="120.51" ybr="176.09" z_order="0">
+    <polygon label="kiwi" occluded="0" source="manual" points="19.29,58.63;14.89,64.31;9.39,75.49;7.74,83.74;10.12,95.66;13.06,100.24;20.94,105.37;25.89,109.04;30.65,111.05;38.72,111.05;47.70,109.22;57.78,104.82;60.35,100.24;62.55,94.74;64.38,87.77;64.02,81.36;62.55,75.86;59.25,67.24;55.22,63.58;49.54,58.81;46.24,57.16;36.70,56.79;29.19,56.61" z_order="0">
+    </polygon>
+    <box label="kiwi" occluded="0" source="manual" xtl="70.14" ytl="64.01" xbr="130.40" ybr="123.67" z_order="0">
     </box>
-    <box label="kiwi" occluded="0" source="manual" xtl="0.24" ytl="103.00" xbr="49.35" ybr="170.52" z_order="0">
+    <box label="kiwi" occluded="0" source="manual" xtl="57.00" ytl="7.63" xbr="116.72" ybr="65.10" z_order="0">
     </box>
-    <box label="kiwi" occluded="0" source="manual" xtl="7.72" ytl="54.66" xbr="63.54" ybr="110.67" z_order="0">
-    </box>
-    <box label="kiwi" occluded="0" source="manual" xtl="16.35" ytl="16.30" xbr="63.16" ybr="60.99" z_order="0">
-    </box>
-    <box label="kiwi" occluded="0" source="manual" xtl="0.00" ytl="0.76" xbr="27.10" ybr="51.78" z_order="0">
-    </box>
-    <box label="kiwi" occluded="0" source="manual" xtl="0.05" ytl="56.39" xbr="18.85" ybr="115.09" z_order="0">
-    </box>
-    <box label="kiwi" occluded="0" source="manual" xtl="54.14" ytl="0.57" xbr="118.60" ybr="23.39" z_order="0">
+    <box label="kiwi" occluded="0" source="manual" xtl="7.74" ytl="54.15" xbr="65.81" ybr="112.72" z_order="0">
     </box>
   </image>
   <image id="6" name="kiwi_7.jpg" width="1200" height="795">
-    <box label="kiwi" occluded="0" source="manual" xtl="684.58" ytl="90.83" xbr="1143.75" ybr="525.83" z_order="0">
+    <box label="kiwi" occluded="0" source="manual" xtl="153.09" ytl="337.37" xbr="470.14" ybr="710.10" z_order="0">
     </box>
-    <box label="kiwi" occluded="0" source="manual" xtl="432.92" ytl="337.50" xbr="834.58" ybr="748.33" z_order="0">
+    <box label="kiwi" occluded="0" source="manual" xtl="273.97" ytl="52.23" xbr="717.83" ybr="476.28" z_order="0">
     </box>
-    <box label="kiwi" occluded="0" source="manual" xtl="162.92" ytl="342.50" xbr="447.08" ybr="686.67" z_order="0">
+    <polygon label="kiwi" occluded="0" source="manual" points="566.79,353.31;482.70,368.69;480.78,401.09;447.34,444.09;440.65,491.96;435.87,579.88;442.56,614.28;486.52,663.02;532.39,719.40;601.19,744.24;650.88,748.92;704.39,746.15;763.64,728.95;791.35,695.51;812.37,656.33;828.62,617.15;844.86,587.52;848.69,559.81;847.73,522.54;837.22,487.19;829.58,445.14;809.51,408.83;788.48,385.80;750.26,358.18;711.08,338.97;644.19,331.33;608.83,330.47" z_order="0">
+    </polygon>
+    <box label="kiwi" occluded="0" source="manual" xtl="430.51" ytl="317.56" xbr="854.55" ybr="767.56" z_order="0">
     </box>
-    <box label="kiwi" occluded="0" source="manual" xtl="254.58" ytl="60.00" xbr="727.08" ybr="471.67" z_order="0">
+    <box label="kiwi" occluded="0" source="manual" xtl="674.23" ytl="83.74" xbr="1145.83" ybr="533.74" z_order="0">
     </box>
   </image>
 </annotations>

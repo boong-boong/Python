@@ -3,7 +3,7 @@ import json
 import cv2
 
 # json path
-json_path = 'annotations/instances_default1.json'
+json_path = 'annotations/instances_default.json'
 
 # json 파일 읽기
 

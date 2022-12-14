@@ -1,7 +1,7 @@
-import xml.etree.ElementTree as ET
 import os
 import json
 import cv2
+import pandas as pd
 
 # json path
 json_path = "annotations/instances_default.json"
@@ -39,26 +39,16 @@ for annotation in coco_info['annotations']:
         ann_info[image_id]["boxes"].append(bbox)
         ann_info[image_id]["categories"].append(categories[category_id])
 
-# print("ann_info >> ", ann_info)
-# import xml.etree.ElementTree as ET
+boxdata = []
 
-tree = ET.ElementTree()
-root = ET.Element("annotations")
 for i, image_info in enumerate(coco_info['images']):
     # print(image_info)
-
-    # xml file save folder
-    os.makedirs("./xml_folder/", exist_ok=True)
-    xml_save_path = "./xml_folder/test.xml"
 
     filename = image_info['file_name']
     width = image_info['width']
     height = image_info['height']
     img_id = image_info['id']
     # print(filename, width, height, img_id)
-    xml_frame = ET.SubElement(
-        root, "image", id=str(i), name=filename, width="%d" % width,
-        height="%d" % height)
 
     # 이미지 가져오기 위한 처리
     file_path = os.path.join("./images", filename)
@@ -73,11 +63,9 @@ for i, image_info in enumerate(coco_info['images']):
     for bbox, category in zip(annotation['boxes'], annotation['categories']):
         x1, y1, w, h = bbox
         print(filename, x1, y1, w, h)
-        ET.SubElement(xml_frame, "box", label="Kiwi", occluded="0",
-                      source="manual", x1=str(x1), y1=str(y1), w=str(w), h=str(h), z_order="0")
-        rec_img = cv2.rectangle(img, (int(x1), int(y1)),
-                                (int(x1+w), int(y1+h)), (225, 0, 255), 2)
+        boxdata.append([filename, bbox])
+        rec_img = cv2.rectangle(img, (int(x1), int(y1)), (int(x1 + w), int(y1 + h)), (225, 0, 255), 2)
 
-    tree._setroot(root)
-    tree.write(xml_save_path, encoding='utf-8')
-    print("xml ok ")
+boxFrame = pd.DataFrame(data=boxdata, columns=['file name', 'bbox'])
+boxFrame.to_csv('./box.csv')
+

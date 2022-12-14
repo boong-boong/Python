@@ -2,7 +2,7 @@ import os
 import json
 import cv2
 
-json_path = "./annotations/instances_default.json"
+json_path = "annotations/instances_default.json"
 
 with open(json_path, "r") as f:
     coco_info = json.load(f)
