@@ -50,6 +50,7 @@ class catvsdogDataset(Dataset):
         if self.transform is not None:
             image = self.transform(image=image)["image"]
 
+        image = image.float()
         return image, label
 
     def __len__(self):
@@ -60,15 +61,14 @@ class catvsdogDataset(Dataset):
 train_transform = A.Compose([
     A.Resize(224, 224),
     A.RGBShift(r_shift_limit=15, g_shift_limit=15, b_shift_limit=15, p=1.0),
-    A.Normalize(),
     ToTensorV2()
 ])
 
 val_transform = A.Compose([
     A.Resize(224, 224),
-    A.Normalize(),
     ToTensorV2()
 ])
+
 
 # dataset
 train_dataset = catvsdogDataset("./dataset/train/", transform=train_transform)
@@ -95,7 +95,7 @@ def visualize_augmentation(dataset, idx=0, samples=10, cols=5):
 
 # 평가
 def calculate_accuracy(output, target):
-    output = target.sigmoid(output) >= 0.5
+    output = torch.sigmoid(output) >= 0.5
     target = target == 1.0
     # tensor.item() tensor 값을 정수로 뽑아줌
     return torch.true_divide((target == output).sum(dim=0), output.size(0)).item()
@@ -113,13 +113,13 @@ class MetricMonitor:
         metric = self.metrics[metric_name]
         metric['val'] += val
         metric['count'] += 1
-        metric['avg'] += metric['val'] / metric['count']
+        metric['avg'] = metric['val'] / metric['count']
 
     def __str__(self):
         return ' | '.join(
             [
-                '{metric_name} : {avg : .{float_precisipon}f}'.format(
-                    metric_name=metric_name, avg=metric['avg'], float_precisipon=self.float_precision
+                '{metric_name} : {avg:.{float_precision}f}'.format(
+                    metric_name=metric_name, avg=metric['avg'], float_precision=self.float_precision
                 )
                 for (metric_name, metric) in self.metrics.items()
             ]
@@ -128,7 +128,7 @@ class MetricMonitor:
 
 params = {
     'model': 'resnet18',
-    'device': 'mps:0',
+    'device': device,
     'lr': 0.001,
     'batch_size': 64,
     'num_workers': 0,
@@ -143,6 +143,7 @@ print(model)
 
 criterion = nn.BCEWithLogitsLoss().to(device)
 optimizer = torch.optim.Adam(model.parameters(), lr=params['lr'])
+
 
 # data loader
 train_loader = DataLoader(train_dataset, batch_size=params['batch_size'],
@@ -161,7 +162,7 @@ def save_model(model, save_dir, file_name='last.pt'):
         torch.save(model.module.state_dict(), output_path)
     else:
         print('single GPU activate')
-        torch.save(model.module.state_dict(), output_path)
+        torch.save(model.state_dict(), output_path)
 
 
 # train
@@ -172,11 +173,11 @@ def train(train_loader, model, criterion, optimizer, epoch, params, save_dir):
     stream = tqdm(train_loader)
     for i, (image, target) in enumerate(train_loader):
         images = image.to(params['device'])
-        targets = target.to(params['device']).float()
+        targets = target.to(params['device'])
+        targets = targets.unsqueeze(1)
 
         output = model(images)
-        targets = targets.unsqueeze(1)
-        loss = criterion(output, targets)
+        loss = criterion(output, targets.float())
         accuracy = calculate_accuracy(output, targets)
         metric_monitor.update('Loss', loss.item())
         metric_monitor.update('Accuracy', accuracy)
@@ -194,17 +195,18 @@ def train(train_loader, model, criterion, optimizer, epoch, params, save_dir):
 
 
 # val
-def validate(val_loader, model, criterion, epoch, params):
+def validate(val_loader, model, criterion, epoch, device):
     metric_monitor = MetricMonitor()
     model.eval()
     stream = tqdm(val_loader)
     with torch.no_grad():
         for i, (image, target) in enumerate(val_loader):
-            images = image.to(params['device'])
-            targets = target.to(params['device'])
+            images = image.to(device)
+            targets = target.to(device)
+            targets = targets.unsqueeze(1)
 
             output = model(images)
-            loss = criterion(output, targets)
+            loss = criterion(output, targets.float())
             accuracy = calculate_accuracy(output, targets)
             metric_monitor.update('Loss', loss.item())
             metric_monitor.update('Accuracy', accuracy)
@@ -220,4 +222,4 @@ save_dir = './weights'
 
 for epoch in range(1, params['epoch'] + 1):
     train(train_loader, model, criterion, optimizer, epoch, params, save_dir)
-    validate(val_loader, model, criterion, epoch, params)
+    validate(val_loader, model, criterion, epoch, device)
