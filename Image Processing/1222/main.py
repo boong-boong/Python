@@ -19,9 +19,8 @@ device = torch.device('mps:0' if torch.backends.mps.is_available() else 'cpu')
 # train aug
 train_transform = A.Compose([
     A.Resize(height=224, width=224),
-    A.RandomRotate90(p=1.0),
-    A.HorizontalFlip(p=1.0),
-    A.Cutout(p=1.0),
+    A.RandomRotate90(p=0.7),
+    A.Cutout(),
 
     ToTensorV2()
 ])
