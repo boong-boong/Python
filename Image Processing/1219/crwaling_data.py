@@ -91,5 +91,5 @@ def image_download(keyword):
 
 
 if __name__ == '__main__':
-    pool = Pool(processes=5)
+    pool = Pool(processes=2)
     pool.map(image_download, keyword)

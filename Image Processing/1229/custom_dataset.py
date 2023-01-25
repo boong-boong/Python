@@ -20,7 +20,6 @@ class custom_dataset(Dataset):
         self.transform = transforms.Compose([
             transforms.ToTensor()
         ])
-
     def __getitem__(self, index):
         image_path = self.file_path[index]
         # print(image_path)
